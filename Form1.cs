@@ -11,25 +11,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using WindowsInput;
 using System.Windows.Forms;
-/*
- 
- _____ ___________ _____   
-|_   _|  _  |  _  \  _  |_ 
-  | | | | | | | | | | | (_)
-  | | | | | | | | | | | |  
-  | | \ \_/ / |/ /\ \_/ /_ 
-  \_/  \___/|___/  \___/(_)
-                           
-                           
-1. Make specific window hooking ( dangerous because this is technically a cheat : < )
-2. Keybinding
-3. figure out why the FUCK the program memory leaks
-4. Program icon
-5. Presets
-6. Configuration saving
-
-*/
-
 
 namespace Autoclicker2
 {
@@ -130,7 +111,7 @@ namespace Autoclicker2
                        startButton.Enabled = true;
                        isClicking = false;
                        Thread.Sleep(10);
-                       clickingThread.Abort(); // wait for the thread to finish
+                       clickingThread.Abort(); 
                    }
                }
            }
