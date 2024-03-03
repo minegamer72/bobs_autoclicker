@@ -231,5 +231,11 @@ namespace Autoclicker2
         {
             Close();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // super dooper stupid string because i'm too lazy to make another form for easier editing.
+            System.Windows.Forms.MessageBox.Show("┌───────────────────────────────────────────────────────────┐ \n│This software is both free as in freedom AND free as in price. If you    | \n│ paid money for this, you were scammed.                                                 │ \n└───────────────────────────────────────────────────────────┘  \n \n GNU GENERAL PUBLIC LICENSE: \n https://www.gnu.org/licenses/gpl-3.0.en.html#license-text  \n Project Github link: \n https://github.com/minegamer72/bobs_autoclicker");
+        }
     }
 }
