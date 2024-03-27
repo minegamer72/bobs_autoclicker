@@ -37,14 +37,14 @@ namespace Autoclicker2
             this.topMostCheckBox = new System.Windows.Forms.CheckBox();
             this.bindingBox = new System.Windows.Forms.TextBox();
             this.stopButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.hourLabel = new System.Windows.Forms.Label();
+            this.minuteLabel = new System.Windows.Forms.Label();
+            this.milliLabel = new System.Windows.Forms.Label();
+            this.secondsLabel = new System.Windows.Forms.Label();
             this.mouseButtonType = new System.Windows.Forms.ComboBox();
             this.clickTypeBox = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.mouseButtonLabel = new System.Windows.Forms.Label();
+            this.clickTypeLabel = new System.Windows.Forms.Label();
             this.hourBox = new System.Windows.Forms.NumericUpDown();
             this.minBox = new System.Windows.Forms.NumericUpDown();
             this.secBox = new System.Windows.Forms.NumericUpDown();
@@ -55,10 +55,13 @@ namespace Autoclicker2
             this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.minecraftSwordFarmerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wTFHX0RToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spanishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hourBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBox)).BeginInit();
@@ -144,41 +147,41 @@ namespace Autoclicker2
             this.stopButton.UseVisualStyleBackColor = true;
             this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
             // 
-            // label1
+            // hourLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Hours";
+            this.hourLabel.AutoSize = true;
+            this.hourLabel.Location = new System.Drawing.Point(97, 8);
+            this.hourLabel.Name = "hourLabel";
+            this.hourLabel.Size = new System.Drawing.Size(35, 13);
+            this.hourLabel.TabIndex = 2;
+            this.hourLabel.Text = "Hours";
             // 
-            // label2
+            // minuteLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Minutes";
+            this.minuteLabel.AutoSize = true;
+            this.minuteLabel.Location = new System.Drawing.Point(97, 36);
+            this.minuteLabel.Name = "minuteLabel";
+            this.minuteLabel.Size = new System.Drawing.Size(44, 13);
+            this.minuteLabel.TabIndex = 4;
+            this.minuteLabel.Text = "Minutes";
             // 
-            // label3
+            // milliLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Milliseconds";
+            this.milliLabel.AutoSize = true;
+            this.milliLabel.Location = new System.Drawing.Point(97, 86);
+            this.milliLabel.Name = "milliLabel";
+            this.milliLabel.Size = new System.Drawing.Size(64, 13);
+            this.milliLabel.TabIndex = 8;
+            this.milliLabel.Text = "Milliseconds";
             // 
-            // label4
+            // secondsLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(96, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Seconds";
+            this.secondsLabel.AutoSize = true;
+            this.secondsLabel.Location = new System.Drawing.Point(96, 61);
+            this.secondsLabel.Name = "secondsLabel";
+            this.secondsLabel.Size = new System.Drawing.Size(49, 13);
+            this.secondsLabel.TabIndex = 6;
+            this.secondsLabel.Text = "Seconds";
             // 
             // mouseButtonType
             // 
@@ -191,6 +194,7 @@ namespace Autoclicker2
             this.mouseButtonType.Size = new System.Drawing.Size(121, 21);
             this.mouseButtonType.TabIndex = 11;
             this.mouseButtonType.Text = "Left";
+            this.mouseButtonType.SelectedIndexChanged += new System.EventHandler(this.mouseButtonType_SelectedIndexChanged);
             // 
             // clickTypeBox
             // 
@@ -204,23 +208,23 @@ namespace Autoclicker2
             this.clickTypeBox.TabIndex = 12;
             this.clickTypeBox.Text = "Single";
             // 
-            // label5
+            // mouseButtonLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(55, 157);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Mouse Button";
+            this.mouseButtonLabel.AutoSize = true;
+            this.mouseButtonLabel.Location = new System.Drawing.Point(55, 157);
+            this.mouseButtonLabel.Name = "mouseButtonLabel";
+            this.mouseButtonLabel.Size = new System.Drawing.Size(73, 13);
+            this.mouseButtonLabel.TabIndex = 13;
+            this.mouseButtonLabel.Text = "Mouse Button";
             // 
-            // label6
+            // clickTypeLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(67, 199);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Click type";
+            this.clickTypeLabel.AutoSize = true;
+            this.clickTypeLabel.Location = new System.Drawing.Point(67, 199);
+            this.clickTypeLabel.Name = "clickTypeLabel";
+            this.clickTypeLabel.Size = new System.Drawing.Size(53, 13);
+            this.clickTypeLabel.TabIndex = 14;
+            this.clickTypeLabel.Text = "Click type";
             // 
             // hourBox
             // 
@@ -270,6 +274,7 @@ namespace Autoclicker2
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.presetsToolStripMenuItem,
+            this.languageToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -306,6 +311,13 @@ namespace Autoclicker2
             this.wTFHX0RToolStripMenuItem.Text = "WTF H@X0R!?!?!?!?";
             this.wTFHX0RToolStripMenuItem.Click += new System.EventHandler(this.wTFHX0RToolStripMenuItem_Click);
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "Info";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
@@ -318,11 +330,11 @@ namespace Autoclicker2
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.hourBox);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.hourLabel);
+            this.panel2.Controls.Add(this.minuteLabel);
+            this.panel2.Controls.Add(this.secondsLabel);
             this.panel2.Controls.Add(this.milliBox);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.milliLabel);
             this.panel2.Controls.Add(this.secBox);
             this.panel2.Controls.Add(this.minBox);
             this.panel2.Location = new System.Drawing.Point(0, 27);
@@ -330,12 +342,28 @@ namespace Autoclicker2
             this.panel2.Size = new System.Drawing.Size(182, 114);
             this.panel2.TabIndex = 22;
             // 
-            // aboutToolStripMenuItem
+            // languageToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "Info";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.spanishToolStripMenuItem});
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.languageToolStripMenuItem.Text = "Language";
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // spanishToolStripMenuItem
+            // 
+            this.spanishToolStripMenuItem.Name = "spanishToolStripMenuItem";
+            this.spanishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.spanishToolStripMenuItem.Text = "Español";
+            this.spanishToolStripMenuItem.Click += new System.EventHandler(this.spanishToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -345,8 +373,8 @@ namespace Autoclicker2
             this.ClientSize = new System.Drawing.Size(183, 409);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.clickTypeLabel);
+            this.Controls.Add(this.mouseButtonLabel);
             this.Controls.Add(this.clickTypeBox);
             this.Controls.Add(this.mouseButtonType);
             this.Controls.Add(this.panel1);
@@ -382,14 +410,14 @@ namespace Autoclicker2
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox bindingBox;
         private System.Windows.Forms.Button stopButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label hourLabel;
+        private System.Windows.Forms.Label minuteLabel;
+        private System.Windows.Forms.Label milliLabel;
+        private System.Windows.Forms.Label secondsLabel;
         private System.Windows.Forms.ComboBox mouseButtonType;
         private System.Windows.Forms.ComboBox clickTypeBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label mouseButtonLabel;
+        private System.Windows.Forms.Label clickTypeLabel;
         private System.Windows.Forms.NumericUpDown hourBox;
         private System.Windows.Forms.NumericUpDown minBox;
         private System.Windows.Forms.NumericUpDown secBox;
@@ -407,6 +435,9 @@ namespace Autoclicker2
         private System.Windows.Forms.Label warnLabel;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem spanishToolStripMenuItem;
     }
 }
 

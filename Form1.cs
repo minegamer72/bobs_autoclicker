@@ -229,6 +229,7 @@ namespace Autoclicker2
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            clickingThread.Abort();
             Close();
         }
 
@@ -236,6 +237,51 @@ namespace Autoclicker2
         {
             // super dooper stupid string because i'm too lazy to make another form for easier editing.
             System.Windows.Forms.MessageBox.Show("┌───────────────────────────────────────────────────────────┐ \n│This software is both free as in freedom AND free as in price. If you    | \n│ paid money for this, you were scammed.                                                 │ \n└───────────────────────────────────────────────────────────┘  \n \n GNU GENERAL PUBLIC LICENSE: \n https://www.gnu.org/licenses/gpl-3.0.en.html#license-text  \n Project Github link: \n https://github.com/minegamer72/bobs_autoclicker");
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // time labels
+            hourLabel.Text = ("Hours");
+            minuteLabel.Text = ("Minutes");
+            secondsLabel.Text = ("Seconds");
+            milliLabel.Text = ("Milliseconds");
+
+            // start/stop buttons
+            startButton.Text = ("Start");
+            stopButton.Text = ("Stop");
+
+            // other
+            languageToolStripMenuItem.Text = ("Language");
+
+        }
+
+        private void spanishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // time labels
+            hourLabel.Text = ("Horas");
+            minuteLabel.Text = ("Minutos");
+            secondsLabel.Text = ("Segundos");
+            milliLabel.Text = ("Milisegundos");
+
+            // start/stop buttons
+            startButton.Text = ("Empezar");
+            stopButton.Text = ("Parar");
+
+            // other
+            languageToolStripMenuItem.Text = ("Idioma");
+        }
+
+        private void mouseButtonType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                clickingThread.Abort();
+            }
         }
     }
 }
