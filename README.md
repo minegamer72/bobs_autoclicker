@@ -8,5 +8,5 @@ Wayland: Clicking only works on the program window. <br>
 X11: Unknown support, but if you want to use an autoclicker you should probably be using [XClicker](https://github.com/robiot/XClicker) instead.
 
 # Will there be more support for this program?
-No. I refuse to create programs for an operating system that is just straight up spyware.
+Yes, but only if it is a major bug (crowdstrike level stuff). Otherwise, I refuse to create programs for an operating system that is just straight up spyware.
 [Here is why you should stop using Microsoft Windows](https://bobs-cool-site.neocities.org/pages/rambles/nomicrosoft)
